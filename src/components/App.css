@@ -1,0 +1,162 @@
+/*
+black: #0B0C10;
+light-black: #1a1a1d;
+blue-gray: #1F2833;
+light-gray: #C5C6C7;
+teal: #66fcf1;
+dark-teal: #45A29E;
+*/
+
+/*
+teal: #3AAFA9;
+dark-teal: #2B7A78;
+black: #17252A;
+mint: #DEF2F1;
+white: #FEFFFF;
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #3aafa9;
+  color: #feffff;
+  font-size: 16px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+h1 {
+  font-size: 4.5em;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #2b7a78;
+  letter-spacing: -0.025em;
+  margin: 0;
+}
+
+h2 {
+  font-weight: 300;
+  font-size: 1.5em;
+  letter-spacing: 0.05em;
+}
+
+.container {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #def2f1;
+  border-radius: 3px;
+  border: 3px solid #2b7a78;
+}
+
+@media (min-width: 769px) {
+  .container {
+    margin: 2.5rem auto;
+  }
+}
+
+/* Result Component */
+.result {
+  padding: 0;
+}
+
+/* Quiz Component */
+.answerOptions {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* QuestionCount Component */
+.questionCount {
+  padding: 0;
+  font-size: 14px;
+}
+
+/* Question Component */
+.question {
+  margin: 0;
+  padding: 2rem 0;
+}
+
+/* AnswerOption Component */
+.answerOption {
+  border-radius: 3px;
+  margin: 30px 0;
+  background-color: #eefbfe;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+}
+
+.answerOption:hover {
+  background-color: #d2f5f3;
+}
+
+.radioCustomButton {
+  position: absolute;
+  width: auto;
+  opacity: 0;
+}
+
+.radioCustomButton,
+.radioCustomLabel {
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.radioCustomLabel {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 1.5rem 2.5rem;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #17252a;
+}
+
+/* Animation */
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out 0.3s;
+}
+
+.fade-leave {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 1;
+}
+
+.fade-leave.fade-leave-active {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-appear {
+  opacity: 0;
+}
+
+.fade-appear.fade-appear-active {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
