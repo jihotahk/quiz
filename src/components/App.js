@@ -101,10 +101,6 @@ class App extends React.Component {
     return (
       <div>
         <div className="App">
-          <div className="App-header">
-            {/* <img src={logo} className="App-logo" alt="logo" /> */}
-            <h1>Enneagram</h1>
-          </div>
           {this.state.result ? this.renderResult() : this.renderQuiz()}
         </div>
       </div>

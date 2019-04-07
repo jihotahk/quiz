@@ -5,27 +5,146 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  animation: bg 7.2s linear forwards;
 }
 
-.splash-screen .loading-dot {
-  font-size: 100px;
-  margin-top: -80px;
-  position: relative;
-  animation: ease-in-out infinite alternate;
-  animation-name: run;
-  animation-duration: 1.2s;
+.splash-screen--message {
+  font-size: 20px;
+  max-width: 250px;
+  text-align: center;
+  opacity: 0;
+  animation: message 3.5s linear forwards;
 }
 
-@keyframes run {
+.splash-screen .logo svg {
+  width: 250px;
+  height: 250px;
+  margin-bottom: 3rem;
+}
+
+.path {
+  stroke-width: 3;
+  stroke: #feffff;
+}
+
+.path__3,
+.path__4,
+.path__1,
+.path__2,
+.path__7,
+.path__11,
+.path__12,
+.path__14 {
+  stroke-dasharray: 250;
+  stroke-dashoffset: 250;
+  animation: dash250 4s linear alternate infinite;
+}
+
+.path__6,
+.path__15,
+.path__16,
+.path__5,
+.path__9,
+.path__10,
+.path__19,
+.path__8,
+.path__17,
+.path__18,
+.path__24,
+.path__25,
+.path__23,
+.path__21,
+.path__22 {
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  animation: dash400 3.5s linear alternate infinite;
+}
+
+.path__20 {
+  stroke-dasharray: 600;
+  stroke-dashoffset: 600;
+  animation: dash600 3.5s linear alternate infinite;
+}
+
+.path__13 {
+  stroke-dasharray: 850;
+  stroke-dashoffset: 850;
+  animation: dash850 3.5s linear alternate infinite;
+}
+
+@keyframes bg {
   0% {
-    left: -90px;
-    color: #eee;
-  }
-  50% {
-    color: #666;
+    background-color: #2b7a78;
   }
   100% {
-    left: 90px;
-    color: #eee;
+    background-color: #3aafa9;
+  }
+}
+
+@keyframes message {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes dash250 {
+  0% {
+    stroke-dashoffset: 250;
+    opacity: 0.15;
+  }
+  25% {
+    opacity: 0.3;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes dash400 {
+  0% {
+    stroke-dashoffset: 400;
+    opacity: 0.1;
+  }
+  25% {
+    opacity: 0.3;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes dash600 {
+  0% {
+    stroke-dashoffset: 600;
+    opacity: 0.1;
+  }
+  25% {
+    opacity: 0.3;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes dash850 {
+  0% {
+    stroke-dashoffset: 850;
+    opacity: 0.1;
+  }
+  25% {
+    opacity: 0.3;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 1;
   }
 }
