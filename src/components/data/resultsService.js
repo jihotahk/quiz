@@ -24,6 +24,19 @@ export class ResultsService {
     "The Peacemaker"
   ];
 
+  static gifMap = [
+    "",
+    "https://media.giphy.com/media/pI2paNxecnUNW/giphy.gif",
+    "https://media.giphy.com/media/1k03CFDCuEF36Q1EAG/giphy.gif",
+    "https://media.giphy.com/media/VspTn3CPKAHoA/giphy.gif",
+    "https://media.giphy.com/media/C7olQswvzSwAE/giphy.gif",
+    "https://media.giphy.com/media/dyW465dUWvQME/giphy.gif",
+    "https://media.giphy.com/media/grWLhJhiN5sK4/giphy.gif",
+    "https://media.giphy.com/media/iuhJmXokJZhZe/giphy.gif",
+    "https://media.giphy.com/media/pVsn5LJEgMKxa/giphy.gif",
+    "https://media.giphy.com/media/FDlls2YEg984M/giphy.gif"
+  ];
+
   // Converts Letter result to enneagram number type
   static convertLetterToNumber = (letter) => {
     return this.typeMap.find((type) => type.letter === letter).number;

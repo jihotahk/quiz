@@ -2,6 +2,7 @@ import React from "react";
 import Question from "../components/Question";
 import QuestionCount from "../components/QuestionCount";
 import AnswerOption from "../components/AnswerOption";
+import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 
 const Quiz = (props) => {
   // iterate over the answer options to create array of 2 questions.
@@ -21,12 +22,22 @@ const Quiz = (props) => {
   };
 
   return (
-    <div className="quiz">
+    <div className="quiz" key={props.questionId}>
       <Question />
-      <QuestionCount counter={props.questionId} total={props.questionTotal} />
-      <ul className="answerOptions">
-        {questionArray.map(renderAnswerOptions)}
-      </ul>
+      <ReactCSSTransitionGroup
+        className="container"
+        component="div"
+        transitionName="fade"
+        transitionEnterTimeout={800}
+        transitionLeaveTimeout={800}
+        transitionAppear
+        transitionAppearTimeout={800}
+      >
+        <QuestionCount counter={props.questionId} total={props.questionTotal} />
+        <ul className="answerOptions">
+          {questionArray.map(renderAnswerOptions)}
+        </ul>
+      </ReactCSSTransitionGroup>
     </div>
   );
 };
